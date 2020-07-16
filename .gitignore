@@ -1,0 +1,5 @@
+.idea
+/venv
+.env
+notes.txt
+db.sqlite3

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-content">
+    <div class="card-container h300">
+        <div class="card-header">
+            <button id="back-button" class="button button-round font-large hidden">‹</button>
+            <h1>Scheduling App</h1>
+        </div>
+        <div class="card h200" id="front-card">
+            <button class="button button-large" id="btn-register">Register</button>
+            <button class="button button-large" id="btn-login">Login</button>
+        </div>
+        <div class="card hidden" id="reg-card">
+            <form id="register-form" method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                <input placeholder="Username" id="reg-username" required spellcheck="false">
+                <input placeholder="Password" type="password" id="reg-password" required spellcheck="false">
+                <button id="register-submit" class="button">Register</button>
+            </form>
+        </div>
+        <div class="card hidden" id="log-card">
+            <form id="login-form" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <input placeholder="Username" id="log-username" required>
+                <input placeholder="Password" type="password" id="log-password" required>
+                <button id="login-submit" class="button">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'mainsite/js/common.min.js' %}"></script>
+{% endblock %}
