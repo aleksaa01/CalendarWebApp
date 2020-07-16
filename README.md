@@ -17,3 +17,6 @@ Only thing that you have to do is to convert unix line endings to windows line e
 git clone https://github.com/aleksaa01/CalendarWebApp.git --config core.autocrlf=input
 ```
 Rest of the commands are the same.
+
+# Preview
+![CalendarWebApp installation preview](https://github.com/aleksaa01/CalendarWebApp/blob/master/docs/gifs/CalendarWebApp-installation.gif)
